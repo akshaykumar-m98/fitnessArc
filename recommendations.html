@@ -1,0 +1,34 @@
+function calculateBMI() {
+    const feet = parseInt(document.getElementById('feet').value);
+    const inches = parseInt(document.getElementById('inches').value);
+    const weight = parseFloat(document.getElementById('weight').value);
+
+    if (feet > 0 && inches >= 0 && weight > 0) {
+        const heightInMeters = (feet * 0.3048) + (inches * 0.0254);
+        const bmi = weight / (heightInMeters * heightInMeters);
+        const bmiCategory = getBMICategory(bmi);
+        const bmiResult = `Your BMI is ${bmi.toFixed(2)} (${bmiCategory})`;
+
+        // Display BMI result and show Next button
+        document.getElementById('result').innerText = bmiResult;
+        document.getElementById('bmi-result').style.display = 'block';
+    } else {
+        alert('Please enter valid height and weight');
+    }
+}
+
+function getBMICategory(bmi) {
+    if (bmi < 18.5) {
+        return 'Underweight';
+    } else if (bmi >= 18.5 && bmi < 24.9) {
+        return 'Normal weight';
+    } else if (bmi >= 25 && bmi < 29.9) {
+        return 'Overweight';
+    } else {
+        return 'Obese';
+    }
+}
+
+function redirectToRecommendations() {
+    window.location.href = 'recommendations.html';
+}

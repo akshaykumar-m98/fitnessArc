@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            background-image: url("illustration-fitness-equipments-design-background_916191-36121.jpg");
+            background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    background-attachment: fixed;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .day-section {
+            background-color: #fff;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: fadeIn 0.5s ease;
+        }
+        .day-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+            user-select: none;
+        }
+        .day-content {
+            padding: 10px;
+            display: none;
+            background-color: #f9f9f9;
+            border-radius: 0 0 8px 8px;
+        }
+        .meal-table {
+            width: 100%;
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+        .meal-table th, .meal-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .meal-type {
+            font-weight: bold;
+            width: 30%;
+        }
+        .meal-content {
+            width: 70%;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .navbarr img {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+}
+.navbarr img {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="header">
+    Diet Plan
+</div>
+<div class="navbarr">
+    <a href="index.html" ><img src="Untitled(1).png" alt="Witness Image"></a>
+       <!-- <button onclick="location.href='welcome.html'">Login</button> -->
+   </div>
+<div class="navbar">
+    <a href="#" onclick="toggleDay('sunday')">Sunday</a>
+    <a href="#" onclick="toggleDay('monday')">Monday</a>
+    <a href="#" onclick="toggleDay('tuesday')">Tuesday</a>
+    <a href="#" onclick="toggleDay('wednesday')">Wednesday</a>
+    <a href="#" onclick="toggleDay('thursday')">Thursday</a>
+    <a href="#" onclick="toggleDay('friday')">Friday</a>
+    <a href="#" onclick="toggleDay('saturday')">Saturday</a>
+</div>
+
+<!-- Day Sections -->
+<div class="day-section">
+    <div class="day-header" onclick="toggleDay('sunday')">Sunday</div>
+    <div id="sunday" class="day-content">
+        <table class="meal-table">
+            <tr>
+                <th class="meal-type">Breakfast (8:00-8:30AM)</th>
+                <td class="meal-content">2 egg brown bread sandwich + green chutney + 1 cup milk + 3 cashews + 4 almonds + 2 walnuts</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Mid-Meal (11:00-11:30AM)</th>
+                <td class="meal-content">1 cup banana shake</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Lunch (2:00-2:30PM)</th>
+                <td class="meal-content">1 cup arhar dal + 1 cup potato curry + 3 chapatti + 1/2 cup rice + 1/2 cup low fat curd + salad</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Evening (4:00-4:30PM)</th>
+                <td class="meal-content">1 cup strawberry smoothie + 1 cup vegetable poha</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Dinner (8:00-8:30PM)</th>
+                <td class="meal-content">1.5 cup chicken curry + 3 chapatti + salad</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Monday -->
+<div class="day-section">
+    <div class="day-header" onclick="toggleDay('monday')">Monday</div>
+    <div id="monday" class="day-content">
+        <table class="meal-table">
+            <tr>
+                <th class="meal-type">Breakfast (8:00-8:30AM)</th>
+                <td class="meal-content">3 onion stuffed parantha + 1 cup curd + 3 cashews + 4 almonds + 2 walnuts</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Mid-Meal (11:00-11:30AM)</th>
+                <td class="meal-content">1 cup mango shake</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Lunch (2:00-2:30PM)</th>
+                <td class="meal-content">1 cup moong dal/ chicken curry + 1 cup potato and caulifllower vegetable + 3 chapatti + 1/2 cup rice + salad</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Evening (4:00-4:30PM)</th>
+                <td class="meal-content">1 cup pomegranate juice + 2 butter toasted bread</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Dinner (8:00-8:30PM)</th>
+                <td class="meal-content">1 cup beans potato vegetable + 3 chapatti + salad</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Tuesday -->
+<div class="day-section">
+    <div class="day-header" onclick="toggleDay('tuesday')">Tuesday</div>
+    <div id="tuesday" class="day-content">
+        <table class="meal-table">
+            <tr>
+                <th class="meal-type">Breakfast (8:00-8:30AM)</th>
+                <td class="meal-content">3 paneer stuffed besan cheela + green chutney + 1 cup curd + 3 cashews + 4 almonds + 2 walnuts</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Mid-Meal (11:00-11:30AM)</th>
+                <td class="meal-content">1 apple smoothie with maple syrup</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Lunch (2:00-2:30PM)</th>
+                <td class="meal-content">1 cup masoor dal + 1 cup calocasia + 3 chapatti + 1/2 cup rice + 1 cup low curd + salad</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Evening (4:00-4:30PM)</th>
+                <td class="meal-content">1 cup tomato soup with bread crumbs + 1 cup aloo chaat</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Dinner (8:00-8:30PM)</th>
+                <td class="meal-content">1 cup carrot peas vegetable + 3 chapatti + salad</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Wednesday -->
+<div class="day-section">
+    <div class="day-header" onclick="toggleDay('wednesday')">Wednesday</div>
+    <div id="wednesday" class="day-content">
+        <table class="meal-table">
+            <tr>
+                <th class="meal-type">Breakfast (8:00-8:30AM)</th>
+                <td class="meal-content">1.5 cup vegetable bread upma + 1 cup milk + 3 cashews + 4 almonds + 2 walnuts</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Mid-Meal (11:00-11:30AM)</th>
+                <td class="meal-content">1 cup ripe banana with 2 tsp ghee</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Lunch (2:00-2:30PM)</th>
+                <td class="meal-content">1 cup rajma curry + 1 cup spinach potato + 3 chapatti + 1/2 cup rice + salad</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Evening (4:00-4:30PM)</th>
+                <td class="meal-content">1 cup vegetable juice + 1 cup upma</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Dinner (8:00-8:30PM)</th>
+                <td class="meal-content">1.5 cup parwal vegetable + 3 chapatti + salad</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Thursday -->
+<div class="day-section">
+    <div class="day-header" onclick="toggleDay('thursday')">Thursday</div>
+    <div id="thursday" class="day-content">
+        <table class="meal-table">
+            <tr>
+                <th class="meal-type">Breakfast (8:00-8:30AM)</th>
+                <td class="meal-content">2 cucumber potato sandwich + 1 tsp green chutney + 1 orange juice + 3 cashews + 4 almonds + 2 walnuts</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Mid-Meal (11:00-11:30AM)</th>
+                <td class="meal-content">1 cup buttermilk + 1 cup sweet potato chaat</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Lunch (2:00-2:30PM)</th>
+                <td class="meal-content">1 cup white chana/ fish curry + 3 chapatti + 1/2 cup rice + salad</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Evening (4:00-4:30PM)</th>
+                <td class="meal-content">1 cup almond milk + banana</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Dinner (8:00-8:30PM)</th>
+                <td class="meal-content">1 cup cauliflower potato vegetable + 3 chapatti + salad</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Friday -->
+<div class="day-section">
+    <div class="day-header" onclick="toggleDay('friday')">Friday</div>
+    <div id="friday" class="day-content">
+        <table class="meal-table">
+            <tr>
+                <th class="meal-type">Breakfast (8:00-8:30AM)</th>
+                <td class="meal-content">2 cup vegetable poha + 1 cup curd + 3 cashews + 4 almonds + 2 walnuts</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Mid-Meal (11:00-11:30AM)</th>
+                <td class="meal-content">2 cups watermelon juice</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Lunch (2:00-2:30PM)</th>
+                <td class="meal-content">1 cup chana dal + 1 cup bhindi vegetable + 3 chapatti + 1/2 cup rice + salad</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Evening (4:00-4:30PM)</th>
+                <td class="meal-content">1 cup sprouts salad + 2 potato cheela + green chutney</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Dinner (8:00-8:30PM)</th>
+                <td class="meal-content">1 cup peas mushroom vegetable + 3 chapatti + salad</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Saturday -->
+<div class="day-section">
+    <div class="day-header" onclick="toggleDay('saturday')">Saturday</div>
+    <div id="saturday" class="day-content">
+        <table class="meal-table">
+            <tr>
+                <th class="meal-type">Breakfast (8:00-8:30AM)</th>
+                <td class="meal-content">3 vegetable suji cheela + 1 cup strawberry shake + 4 cashews + 4 almonds + 3 walnuts</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Mid-Meal (11:00-11:30AM)</th>
+                <td class="meal-content">1 cup coconut water + 1 cup pomegrate</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Lunch (2:00-2:30PM)</th>
+                <td class="meal-content">1 cup mix dal + 1 cup soybean curry + 3 chapatti + 1/2 cup curd + salad</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Evening (4:00-4:30PM)</th>
+                <td class="meal-content">1 cup fruit salad + 4 pc vegetable cutlets + green chutney</td>
+            </tr>
+            <tr>
+                <th class="meal-type">Dinner (8:00-8:30PM)</th>
+                <td class="meal-content">1 cup karela vegetable + 3 chapatti + salad</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script>
+    function toggleDay(day) {
+        const content = document.getElementById(day);
+        if (content.style.display === 'block') {
+            content.style.display = 'none';
+        } else {
+            content.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
